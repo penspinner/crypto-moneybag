@@ -1,9 +1,11 @@
 {
   "name": "crypto-moneybag",
   "version": "1.0.0",
-  "description": "",
+  "description":
+    "Command line program for getting cryptocurrency information built on Coinbase API.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Steven Liao",

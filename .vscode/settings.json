@@ -1,4 +1,5 @@
 {
+  "editor.formatOnSave": true,
   "prettier.eslintIntegration": true,
   "prettier.printWidth": 100,
   "prettier.singleQuote": true,
