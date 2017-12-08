@@ -1,8 +1,7 @@
 {
   "name": "crypto-moneybag",
   "version": "1.0.0",
-  "description":
-    "Command line program for getting cryptocurrency information built on Coinbase API.",
+  "description": "Command line program for getting cryptocurrency information built on Coinbase API.",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -11,7 +10,8 @@
   "author": "Steven Liao",
   "license": "ISC",
   "dependencies": {
-    "coinbase": "^2.0.6"
+    "coinbase": "^2.0.6",
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "^4.12.1",
