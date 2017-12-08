@@ -1,15 +1,17 @@
 const fs = require('fs');
+const path = require('path');
 const coinbase = require('coinbase');
 
-const utf8Encoding = {
-  encoding: 'utf8',
+const utf8Encoding = { encoding: 'utf8' };
+const defaultKeyPath = path.join('apikeys', 'key');
+const defaultSecretPath = path.join('apikeys', 'secret');
+
+module.exports = ({ keyPath = defaultKeyPath, secretPath = defaultSecretPath }) => {
+  const key = fs.readFileSync(keyPath, utf8Encoding);
+  const secret = fs.readFileSync(secretPath, utf8Encoding);
+
+  return new coinbase.Client({
+    apiKey: key,
+    apiSecret: secret,
+  });
 };
-const key = fs.readFileSync('./apikeys/key', utf8Encoding);
-const secret = fs.readFileSync('./apikeys/secret', utf8Encoding);
-
-const client = new coinbase.Client({
-  apiKey: key,
-  apiSecret: secret,
-});
-
-module.exports = client;
