@@ -2,7 +2,6 @@ const minimist = require('minimist');
 const readline = require('readline');
 
 const argv = minimist(process.argv.slice(2));
-console.log(argv);
 const client = require('./client')(argv);
 
 const rl = readline.createInterface({
